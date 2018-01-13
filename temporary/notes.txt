@@ -1,0 +1,20 @@
+Startup File:
+<pattern> --> used to match patterns in input
+
+<template>
+If match found what to do.
+
+</template>
+
+
+.aiml file must specify the template output for each possible pattern. 
+
+The file represents the knowledge
+
+
+--------
+Session for giving specific messages to specific people.
+-> Time + Weather + REST
+-> Making topic specific questions (mainly related to campus)
+
+---
