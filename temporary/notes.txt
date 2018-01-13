@@ -25,13 +25,13 @@ Topics:
 ->	chancellor
 ->	director
 ->	type of college
-->	courses offered
-->	Computer science department)
-->	Fests.
--> 	reachability
+->	courses offered - Nitish
+->	Computer science department -Nitish
+->	Fests. -Nikhil
+-> 	reachability -Nikhil
 ..many more
-4. Eateries in Campus (in details)
+4. Eateries in Campus (in details) (both)
 
-5. Football and Cricket news.
+5. Football and Cricket news.(both)
 6. Time in different parts of the world.
 7. Historical events and calendar dates, day, year birthday
