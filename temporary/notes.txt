@@ -17,4 +17,21 @@ Session for giving specific messages to specific people.
 -> Time + Weather + REST
 -> Making topic specific questions (mainly related to campus)
 
----
+---------
+Topics:
+1. Getting to know about user.
+2. Geography about the world, india in general, and about location of top-tech schools in India.
+3. General Info about campus
+->	chancellor
+->	director
+->	type of college
+->	courses offered
+->	Computer science department)
+->	Fests.
+-> 	reachability
+..many more
+4. Eateries in Campus (in details)
+
+5. Football and Cricket news.
+6. Time in different parts of the world.
+7. Historical events and calendar dates, day, year birthday
