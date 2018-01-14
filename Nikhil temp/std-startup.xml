@@ -12,7 +12,7 @@
         <!-- This learn an aiml file -->
         <template>
             <learn>aiml_files/greetings.aiml</learn>
-
+            <learn>aiml_files/Reachability.aiml</learn>
         </template>
 
     </category>

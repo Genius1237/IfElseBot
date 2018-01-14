@@ -10,7 +10,7 @@
   <category>
     <pattern>MY NAME IS *</pattern>
       <template>
-        You have an interesting name <set name="name"><star/></set>
+        You have an interesting name, <set name="name"><star/></set>
       </template>
   </category>
 

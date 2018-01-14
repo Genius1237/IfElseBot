@@ -1,0 +1,27 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+  <category>
+      <pattern>* reach BITS Hyderabad Campus *</pattern>
+      <template>
+          You can <set name = "topic">reach</set> BITS Hyderabad Campus by catching the 212 Bus from Secunderabad
+          railway station or a cab from the airport.
+      </template>
+  </category>
+
+  <topic name = "reach">
+
+    <category>
+      <pattern> * long does it take *</pattern>
+      <template> It takes 45-50 mins from Secunderabad railway station and 1.5 hours from the airport</template>
+    </category>
+
+    <category>
+      <pattern> * cost * </pattern>
+      <template> 22 Rs. if you come in the 212 Bus from Secunderabad  and around 1500 Rs. if you catch a
+        cab from the airport
+      </template>
+    </category>
+
+  </topic>
+
+</aiml>
