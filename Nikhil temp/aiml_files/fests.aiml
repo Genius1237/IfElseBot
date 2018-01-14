@@ -1,0 +1,102 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<category>
+  <pattern>* FESTS *</pattern>
+  <template>
+    The 3 <set name = "topic">fests</set> at BITS Hyderabad are ATMOS,ARENA and PEARL
+  </template>
+</category>
+
+<topic name = "FESTS">
+
+  <category>
+    <pattern>ATMOS</pattern>
+    <template> ATMOS is the technical fest organized usually in the month of October where people from various campuses
+      participate in competitions such as Robo-Wars, Hackathons and technical quizzes
+    </template>
+  </category>
+
+  <category>
+    <pattern>* ATMOS</pattern>
+    <template>
+      <srai>ATMOS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* ATMOS *</pattern>
+    <template>
+      <srai>ATMOS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ATMOS *</pattern>
+    <template>
+      <srai>ATMOS</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>ARENA</pattern>
+    <template>ARENA is the sports fest organized usually in the month of January where competitons are held
+      for sports such as football,cricket, hockey, chess etc.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* ARENA *</pattern>
+    <template>
+      <srai>ARENA</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ARENA *</pattern>
+    <template>
+      <srai>ARENA</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* ARENA</pattern>
+    <template>
+      <srai>ARENA</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>PEARL</pattern>
+    <template>PEARL is the cultural fest of BITS Hyderabad. Many events such as talks, quizzes and pro-shows
+      take place and many people from various college across India attend this fest.
+    </template>
+  </category>
+
+  <category>
+    <pattern>PEARL *</pattern>
+    <template>
+      <srai>PEARL</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* PEARL *</pattern>
+    <template>
+      <srai>PEARL</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* PEARL</pattern>
+    <template>
+      <srai>PEARL</srai>
+    </template>
+  </category>
+
+</topic>
+
+</aiml>

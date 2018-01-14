@@ -1,24 +1,62 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
   <category>
-      <pattern>* reach BITS Hyderabad Campus *</pattern>
+      <pattern> * REACH BITS HYDERABAD *</pattern>
       <template>
           You can <set name = "topic">reach</set> BITS Hyderabad Campus by catching the 212 Bus from Secunderabad
           railway station or a cab from the airport.
       </template>
   </category>
 
-  <topic name = "reach">
+
+
+  <topic name = "REACH">
 
     <category>
-      <pattern> * long does it take *</pattern>
-      <template> It takes 45-50 mins from Secunderabad railway station and 1.5 hours from the airport</template>
+      <pattern>TIME DURATION</pattern>
+      <template>It takes 45-50 mins from Secunderabad railway station and 1.5 hours from the airport</template>
     </category>
 
     <category>
-      <pattern> * cost * </pattern>
-      <template> 22 Rs. if you come in the 212 Bus from Secunderabad  and around 1500 Rs. if you catch a
+      <pattern> * LONG DOES IT TAKE *</pattern>
+      <template>
+        <srai>TIME DURATION</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>* TIME TAKEN *</pattern>
+      <template>
+        <srai>TIME DURATION</srai>
+      </template>
+    </category>
+
+
+    <category>
+      <pattern>COST</pattern>
+      <template> The cost is 22 Rs. if you come in the 212 Bus from Secunderabad and around 1500 Rs. if you catch a
         cab from the airport
+      </template>
+    </category>
+
+    <category>
+      <pattern> * COST * </pattern>
+      <template>
+        <srai>COST</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>* COST ?</pattern>
+      <template>
+        <srai>COST</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>COST *</pattern>
+      <template>
+        <srai>COST</srai>
       </template>
     </category>
 

@@ -14,6 +14,68 @@
       </template>
   </category>
 
+
+
+  <category>
+    <pattern>BOT NAME</pattern>
+    <template>
+      My name is J.A.R.V.I.S
+    </template>
+  </category>
+
+  <category>
+    <pattern>* YOUR NAME *</pattern>
+    <template>
+      <srai>BOT NAME</srai>
+    </template>
+  </category>
+
+
+    <category>
+      <pattern>* YOUR NAME</pattern>
+      <template>
+        <srai>BOT NAME</srai>
+      </template>
+    </category>
+
+  <category>
+    <pattern>* CALL YOU *</pattern>
+    <template>
+      <srai>BOT NAME</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>BOT INFO</pattern>
+    <template>I am fine</template>
+  </category>
+
+  <category>
+    <pattern>HOW ARE YOU</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW IS IT GOING</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW ARE YOU FEELING TODAY</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+
+
+
   <category>
     <pattern>BYE</pattern>
       <template>
@@ -23,9 +85,31 @@
           <li>Bye bye.</li>
           <li>Bye for now.</li>
           <li>See you later <get name="name"/>.</li>
-          <li>Thanks for chatting, <get name="name"/>.</li>
+          <li>Thanks for chatting <get name="name"/>.</li>
         </random>
       </template>
     </category>
+
+  <category>
+    <pattern>* BYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
 
 </aiml>
