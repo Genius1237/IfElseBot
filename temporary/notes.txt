@@ -1,4 +1,4 @@
-Startup File:
+sStartup File:
 <pattern> --> used to match patterns in input
 
 <template>

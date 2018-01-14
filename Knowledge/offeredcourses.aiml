@@ -1,0 +1,27 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	<category>
+		
+		<pattern>What is your name</pattern>
+		<template><srai>NAME</srai></template>	
+	</category>
+
+	<category>
+		<pattern>Your name please</pattern>
+		<template><srai>NAME</srai></template>
+	</category>
+
+	<category>
+		<pattern>Do you have a name</pattern>
+		<template><srai>NAME</srai></template>
+	</category>
+
+	<category>
+		<pattern>Your name is</pattern>
+		<template><srai>NAME</srai></template>
+	</category>
+
+	<category>
+		<pattern>And you are ?</pattern>
+		<template><srai>NAME</srai></template>
+	</category>
+</aiml>

@@ -1,18 +1,28 @@
 <aiml version="1.0.1" encoding="UTF-8">
-<!-- basic_chat.aiml -->
+    <category>        
+        <pattern>What is your name</pattern>
+        <template><srai>NAME</srai></template>  
+    </category>
 
     <category>
-        <pattern>HELLO</pattern>
-        <template>
-            Well, hello!
-        </template>
+        <pattern>Your name please</pattern>
+        <template><srai>NAME</srai></template>
     </category>
-    
+
     <category>
-        <pattern>WHAT ARE YOU</pattern>
-        <template>
-            I'm a bot, silly!
-        </template>
+        <pattern>Do you have a name</pattern>
+        <template><srai>NAME</srai></template>
     </category>
-    
+
+    <category>
+        <pattern>Your name is</pattern>
+        <template><srai>NAME</srai></template>
+    </category>
+
+    <category>
+        <pattern>And you are ?</pattern>
+        <template><srai>NAME</srai></template>
+    </category>
+
+    <category>What is your name</category>
 </aiml>
