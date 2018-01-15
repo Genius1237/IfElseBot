@@ -1,0 +1,130 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+  <category>
+    <pattern>MY NAME IS *</pattern>
+      <template>
+        <think>
+        <set name="name"><star/></set>
+      </think>
+        <random>
+          <li>How are you,<get name="name"/></li>
+          <li>Pleased to meet you,<get name="name"/></li>
+          <li>Hello,<get name="name"/></li>
+          <li>Cool name</li>
+          <li>You must be as unique as your name</li>
+        </random>
+      </template>
+  </category>
+
+
+
+  <category>
+    <pattern>BOT NAME</pattern>
+    <template>
+      My name is J.A.R.V.I.S
+    </template>
+  </category>
+
+  <category>
+    <pattern>* YOUR NAME *</pattern>
+    <template>
+      <srai>BOT NAME</srai>
+    </template>
+  </category>
+
+
+    <category>
+      <pattern>* YOUR NAME</pattern>
+      <template>
+        <srai>BOT NAME</srai>
+      </template>
+    </category>
+
+
+  <category>
+    <pattern>* CALL YOU *</pattern>
+    <template>
+      <srai>BOT NAME</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* CALL YOU</pattern>
+    <template>
+      <srai>BOT NAME</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>BOT INFO</pattern>
+    <template>I am fine</template>
+  </category>
+
+  <category>
+    <pattern>HOW ARE YOU</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW IS IT GOING</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW ARE YOU FEELING TODAY</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I AM SAD</pattern>
+    <template>
+      <random>
+        <li>Well, don't be</li>
+        <li>I am sad too</li>
+        <li>How can I cheer you up?</li>
+        <li>Why are you sad?</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHO CREATED YOU</pattern>
+    <template>
+      I was created by Nikhil Iyer, Nitish Ravishankar and Anirudh Srinivasan as part of the Artificial Intelligence
+      assignment
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM HAPPY</pattern>
+    <template>
+      <random>
+        <li>Good for you</li>
+        <li>Great!</li>
+        <li>Being happy is crucial for a healthy life</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW WILL MY DAY GO</pattern>
+    <template>
+      <random>
+        <li>It will be as bright as the sun</li>
+        <li>It will definitely be better than yesterday</li>
+        <li>You might find today to be the best day you have ever had</li>
+      </random>
+    </template>
+  </category>
+
+
+</aiml>

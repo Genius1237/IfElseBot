@@ -97,6 +97,43 @@
     </template>
   </category>
 
+  <category>
+    <pattern>PERSONALITIES</pattern>
+    <template>
+      The celebritites who visited BITS Hyderabad during PEARL include Farhan Akthar, Shashi Tharoor and
+      Sonu Nigam
+    </template>
+  </category>
+
+  <category>
+    <pattern>* FAMOUS *</pattern>
+    <template>
+      <srai>PERSONALITIES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* CELEBRITIES *</pattern>
+    <template>
+      <srai>PERSONALITIES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>FAMOUS *</pattern>
+    <template>
+      <srai>PERSONALITIES</srai>
+    </template>
+  </category>
+
+
+    <category>
+      <pattern>CELEBRITIES *</pattern>
+      <template>
+        <srai>PERSONALITIES</srai>
+      </template>
+    </category>
+
 </topic>
 
 </aiml>

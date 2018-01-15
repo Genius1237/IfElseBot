@@ -14,6 +14,7 @@
             <learn>aiml_files/greetings.aiml</learn>
             <learn>aiml_files/Reachability.aiml</learn>
             <learn>aiml_files/fests.aiml</learn>
+            <learn>aiml_files/personal.aiml</learn>
         </template>
 
     </category>
