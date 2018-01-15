@@ -130,6 +130,12 @@
 	</category>
 
 	<category>
+		<pattern>VEGETARIAN</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
 		<pattern>VEGETARIAN MEAL</pattern>
 		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
 		<template><srai>VEGGIE</srai></template>
@@ -142,7 +148,25 @@
 	</category>
 
 	<category>
+		<pattern>* VEGETARIAN</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
 		<pattern>VEGETARIAN *</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>VEG *</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>* VEG</pattern>
 		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
 		<template><srai>VEGGIE</srai></template>
 	</category>
@@ -787,7 +811,7 @@
 
 	<topic name="AMULM">
 		<category>
-			<pattern>AMUL</pattern>
+			<pattern>AMULM</pattern>
 			<template>
 				Available Items:
 				Milkshakes

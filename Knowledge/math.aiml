@@ -1,0 +1,167 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- math.aiml -->
+
+	<category>
+		<pattern>CALCULATE *</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">1</set></think><srai>CALCULATOR</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>COMPUTE *</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">1</set></think><srai>CALCULATOR</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>FIND THE VALUE OF *</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">1</set></think><srai>CALCULATOR</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>EVALUATE *</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">1</set></think><srai>CALCULATOR</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>EVALUATE THE EXPRESSION *</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">1</set></think><srai>CALCULATOR</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>FLIP A COIN</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>FLIP A COIN *</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* FLIP A COIN</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* FLIP A COIN *</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+
+	<category>
+		<pattern>TOSS A COIN</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>TOSS A COIN *</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* TOSS A COIN</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* TOSS A COIN *</pattern>
+		<template><think><set name="ctype">2</set></think><srai>COIN TOSS</srai></template>
+
+	</category>
+
+
+	<category>
+		<pattern>ROLL A DIE</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>ROLL A DIE *</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* ROLL A DIE</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* ROLL A DIE *</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>ROLL A * SIDED DIE</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>ROLL A * SIDED DIE *</pattern>
+		<template><think><set name="expression"><star index="1"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* ROLL A * SIDED DIE</pattern>
+		<template><think><set name="expression"><star index="2"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* ROLL A * SIDED DIE *</pattern>
+		<template><think><set name="expression"><star index="2"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>CALCULATOR</pattern>
+		<template>Calculating...</template>
+	</category>
+
+	<category>
+		<pattern>COIN TOSS</pattern>
+		<template>Ok, Coin up in the air and ..</template>
+	</category>
+
+	<category>
+		<pattern>STANDARD DIE</pattern>
+		<template>Ok, Die on the ground, rolling and...</template>
+	</category>
+
+	<category>
+		<pattern>SPECIAL DIE</pattern>
+		<template>Ok, Die on the gound, rolling and...</template>
+	</category>
+
+	<category>
+		<pattern>RESULTS</pattern>
+		<template>The answer is <get name="expression"/></template>
+	</category>
+
+	<category>
+		<pattern>TOSS OUTCOME</pattern>
+		<template>Its <get name="expression"/></template>
+	</category>
+
+	<category>
+		<pattern>DIE OUTCOME</pattern>
+		<template>You got <get name="expression"/></template>
+	</category>
+
+</aiml>

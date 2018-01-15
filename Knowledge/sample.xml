@@ -5,4 +5,11 @@
 			<learn>eateries.aiml</learn>
 		</template>
 	</category>
+
+	<category>
+		<pattern>LOAD MATH</pattern>
+		<template>
+			<learn>math.aiml</learn>
+		</template>
+	</category>
 </aiml>
