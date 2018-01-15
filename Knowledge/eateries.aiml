@@ -1,0 +1,1109 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- eateries.aiml-->
+
+	<category>
+		<pattern>I AM HUNGRY</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>I AM HUNGRY *</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>FEELING HUNGRY</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>FEELING HUNGRY *</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>* FEELING HUNGRY *</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>* SOMETHING TO EAT</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>* SOMETHING TO EAT *</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>* EATERIES PLEASE</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>* EATERIES</pattern>
+		<template><srai>PLACES</srai></template>
+	</category>
+
+	<category>
+		<pattern>PLACES</pattern>
+		<template>What kind of food would you like to have</template>
+	</category>
+
+	<category>
+		<pattern>FASTFOOD</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			Bits N Bytes
+			Yummpys
+			Want to know more about Nearby places to eat?
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SNACKS</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			C3
+			Bits N Bytes
+		</template>
+	</category>
+
+	<category>
+		<pattern>* MEALS</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			Mess-1 or Mess-2
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BEVERAGE</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			AMUL
+			C3
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BEVERAGES</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			AMUL
+			C3
+		</template>
+	</category>
+
+	<category>
+		<pattern>HOT DRINKS</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>DRINKS</srai></template>
+	</category>
+
+	<category>
+		<pattern>* HOT DRINKS</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>DRINKS</srai></template>
+	</category>
+
+	<category>
+		<pattern>* HOT DRINKS *</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>DRINKS</srai></template>
+	</category>
+
+	<category>
+		<pattern>DRINKS</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			C3
+			YUMMPYS
+		</template>
+	</category>
+
+	<category>
+		<pattern>VEGETARIAN MEAL</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>VEGAN MEAL</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>VEGETARIAN *</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>* VEG *</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template><srai>VEGGIE</srai></template>
+	</category>
+
+	<category>
+		<pattern>VEGGIE</pattern>
+		<that>WHAT KIND OF FOOD WOULD YOU LIKE TO HAVE</that>
+		<template>
+			Recommended places:
+			C3
+		</template>
+	</category>
+
+	<category>
+		<pattern>NEARBY PLACES TO EAT</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+		<pattern>PLACES TO EAT</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+		<pattern>PLACES TO EAT *</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+		<pattern>* PLACES TO EAT</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+		<pattern>* RESTAURANTS NEARBY</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+		<pattern>* NEARBY RESTAURANTS</pattern>
+		<template><srai>RESTAURANTS</srai></template>
+	</category>
+
+	<category>
+
+		<pattern>RESTAURANTS</pattern>
+		<template>The Nearby places to eat are:
+			Bits N Bytes, 
+			C3, 
+			Yummpys, 
+			AMUL,
+			Mess
+			Do you want to know more about a purticular restaurant.
+			<think><set name="topic">NEARBY PLACES</set></think>
+		</template>
+
+	</category>
+	<topic name="NEARBY PLACES">
+
+		<category>
+			<pattern>BITS N BYTES</pattern>
+			<template><srai><set name="topic">BNB</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>BITS N BYTES *</pattern>
+			<template><srai><set name="topic">BNB</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* BITS N BYTES</pattern>
+			<template><srai><set name="topic">BNB</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* BITS N BYTES *</pattern>
+			<template><srai><set name="topic">BNB</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>YUMMPYS</pattern>
+			<template><srai><set name="topic">YUMMPY</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* YUMMPYS</pattern>
+			<template><srai><set name="topic">YUMMPY</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>YUMMPYS *</pattern>
+			<template><srai><set name="topic">YUMMPY</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* YUMMPYS *</pattern>
+			<template><srai><set name="topic">YUMMPY</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>CHAI COFFEE COMPANY</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* CHAI COFFEE COMPANY</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>CHAI COFFEE COMPANY *</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* CHAI COFFEE COMPANY *</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>C3</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* C3</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>C3 *</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* C3 *</pattern>
+			<template><srai><set name="topic">3</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>AMUL</pattern>
+			<template><srai><set name="topic">AMULM</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>AMUL *</pattern>
+			<template><srai><set name="topic">AMULM</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* AMUL</pattern>
+			<template><srai><set name="topic">AMULM</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* AMUL *</pattern>
+			<template><srai><set name="topic">AMULM</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>MESS</pattern>
+			<template><srai><set name="topic">MESS12</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>MESS *</pattern>
+			<template><srai><set name="topic">MESS12</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* MESS</pattern>
+			<template><srai><set name="topic">MESS12</set></srai></template>
+		</category>
+
+		<category>
+			<pattern>* MESS *</pattern>
+			<template><srai><set name="topic">MESS12</set></srai></template>
+		</category>
+	</topic>
+
+	<topic name="BNB">
+		<category>
+			<pattern>BNB</pattern>
+			<template>
+				Available Items:
+				Kathi Rolls, 
+				Pizzas, 
+				Sandwiches, 
+				Subs, 
+				Patties, 
+				Shawarma
+
+				Want to know about prices and other information
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 80/- for 1 person</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Has two outlets, one in Connaught Place, One near Messs-1, both good.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Has two outlets, one in Connaught Place, One near Messs-1, both good.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Has two outlets, one in Connaught Place, One near Messs-1, both good.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Has two outlets, one in Connaught Place, One near Messs-1, both good.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template> Outlet in connaught place crowded in the evenning, long waiting time. One near Mess-1 is relatively less crowded with average waiting time of 5 mins.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER *</pattern>
+			<template> Outlet in connaught place crowded in the evenning, long waiting time. One near Mess-1 is relatively less crowded with average waiting time of 5 mins.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template> Outlet in connaught place crowded in the evenning, long waiting time. One near Mess-1 is relatively less crowded with average waiting time of 5 mins.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template> Outlet in connaught place crowded in the evenning, long waiting time. One near Mess-1 is relatively less crowded with average waiting time of 5 mins.
+		</template>
+		</category>
+
+	</topic>
+
+	<topic name="YUMMPY">
+		<category>
+			<pattern>YUMMPY</pattern>
+			<template>
+				Available Items:
+				Varieties of Maggi Noodles { Butter, Cheese, Schezwan },	
+				Fries { Masala, Normal, Loaded },	
+				Sandwiches { Vegetable, Panner, Chicken },	
+				Hot Beverages { Cappuchino, Latte, Hot Chocolate },
+
+				Want to know about prices and other information
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 50/- for 1 person for food, Rs 10/- for a drink</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Situated just outside Mess-1, in open air.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Situated just outside Mess-1, in open air.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Situated just outside Mess-1, in open air.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Situated just outside Mess-1, in open air.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 5 mins. Overcrowded at night.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 5 mins. Overcrowded at night.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Moderately crowded, average waiting time of 5 mins. Overcrowded at night.
+		</template>
+		</category>
+	</topic>
+
+	<topic name="3">
+		<category>
+			<pattern>3</pattern>
+			<template>
+				Available Items:
+
+				Food:	
+				Dosas { Masala, Onion },	
+				Sandwiches { Vegetable, Cheese },	
+				Puri, Roti-Sabzi, Chole Bhatura,	
+				Daily Special Items
+
+				Beverages:	
+				Milkshakes with Ice-Cream and Fruitshakes.
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 60/- for 1 person for food, Rs 50/- for beverages</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+	</topic>
+
+	<topic name="3">
+		<category>
+			<pattern>3</pattern>
+			<template>
+				Available Items:
+
+				Food:	
+				Dosas { Masala, Onion },	
+				Sandwiches { Vegetable, Cheese },	
+				Puri, Roti-Sabzi, Chole Bhatura,	
+				Daily Special Items
+
+				Beverages:	
+				Milkshakes with Ice-Cream and Fruitshakes.
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 60/- for 1 person for food, Rs 50/- for beverages</template>
+		</category>
+
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Great Ambience, well decorated with modern furniture.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Moderately crowded, average waiting time of 10 mins. Overcrowded in the evening.
+		</template>
+		</category>
+	</topic>
+
+	<topic name="AMULM">
+		<category>
+			<pattern>AMUL</pattern>
+			<template>
+				Available Items:
+				Milkshakes
+				Ice-Cream
+				Pizzas
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 50/- for 1 person</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+	</topic>
+
+	<topic name="AMUL">
+		<category>
+			<pattern>AMUL</pattern>
+			<template>
+				Available Items:
+				Milkshakes
+				Ice-Cream
+				Pizzas
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>Average cost per Rs 50/- for 1 person</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Not much place to sit, like a retail shop.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Negligible waiting time, not crowded.
+		</template>
+		</category>
+	</topic>
+
+	<topic name="MESS12">
+		<category>
+			<pattern>MESS12</pattern>
+			<template>
+				Available Items:
+				Full Meals for Lunch (Unlimited)
+				South Indian, North Indian Breakfast,
+				Snacks
+			</template>
+		</category>
+
+		<category>
+			<pattern>COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* COST *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>* PRICES *</pattern>
+			<template><srai>PRICE</srai>
+		</template>
+		</category>
+
+		<category>
+			<pattern>PRICE</pattern>
+			<template>per plate cost for Breakfast: Rs 35/-, Lunch and Dinner: Rs 55/- Snacks: Rs 25/-</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE</pattern>
+			<template>Highly vacant, good ambience in both Mess-1 and Mess-2.
+		</template>
+		</category>
+
+		<category>
+			<pattern>AMBIENCE *</pattern>
+			<template>Highly vacant, good ambience in both Mess-1 and Mess-2.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE</pattern>
+			<template>Highly vacant, good ambience in both Mess-1 and Mess-2.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* AMBIENCE *</pattern>
+			<template>Highly vacant, good ambience in both Mess-1 and Mess-2.
+		</template>
+		</category>
+
+		<category>
+			<pattern>TIME FOR ORDER</pattern>
+			<template>Usually negligible waiting time.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER</pattern>
+			<template>Usually negligible waiting time.
+		</template>
+		</category>
+
+		<category>
+			<pattern>* TIME FOR ORDER *</pattern>
+			<template>Usually negligible waiting time.
+		</template>
+		</category>
+	</topic>
+
+</aiml>

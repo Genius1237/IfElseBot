@@ -1,0 +1,235 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- about_bits.aiml-->	
+
+	<category>
+
+		<pattern>TELL ME ABOUT BITS</pattern>
+		<template><srai>ABOUT BITS</srai>
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>YOU BELONG TO WHICH CAMPUS</pattern>
+		<template>Hyderabad Campus</template>
+
+	</category>
+	
+	<category>
+
+		<pattern>* CAMPUS DO YOU BELONG *</pattern>
+		<template>Hyderabad Campus
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>WHERE ARE THE OTHER CAMPUSES LOCATED</pattern>
+		<template><srai>OTHER CAMPUSES LOCATION</srai>
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>WHERE IN HYDERABAD IS BITS</pattern>
+		<template><srai>HYDERABAD CAMPUS LOCATION</srai>
+		</template>
+
+	</category>
+
+	<category>
+		<pattern>ABOUT BITS PILANI * CAMPUS</pattern>
+		<template><srai>ABOUT <set name="campus"><star/></set> CAMPUS</srai></template>
+	</category>
+
+	<category>
+
+		<pattern>* ACADEMIC PROGRAMS *</pattern>
+		<template><srai>DEGREES</srai>
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>* ACADEMIC DEPARTMENTS *</pattern>
+		<template><srai>DEPARTEMENTS</srai>
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>* COMPUTER SCIENCE DEPARTMENT *</pattern>
+		<template><srai><set name="topic">CS</set></srai>
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>* CONTACT*</pattern>
+		<template><srai>REACHUS</srai>
+		</template>
+
+	</category>
+
+	<topic name="CS">
+		<category>
+
+			<pattern>* FACULTY*</pattern>
+			<template><srai>FACULTY</srai>
+			</template>
+
+		</category>
+
+		<category>
+
+			<pattern>* COURSES *</pattern>
+			<template><srai>COURSES</srai>
+			</template>
+
+		</category>
+
+		<category>
+
+			<pattern>* CONTACT *</pattern>
+			<template><srai>EXTRAINFO</srai>
+			</template>
+
+		</category>
+	</topic>
+
+
+	<category>
+
+		<pattern>ABOUT BITS</pattern>
+		<template>Birla Institute of Technology and Science, Pilani (shortened BITS Pilani or BITS) is an Indian institute of higher education and a deemed university under Section 3 of the UGC Act 1956.[14] The university has 15 academic departments, and focuses primarily on undergraduate education in engineering and the sciences and on its management programme.</template>
+
+	</category>
+
+	<category>
+
+			<pattern>ABOUT HYDERABAD CAMPUS</pattern>
+			<template>According to Wikipedia, Birla Institute of Technology and Science, Pilani - Hyderabad Campus (shortened to BITS Pilani, Hyderabad Campus or BPHC) is a premier technical and science institute for higher education in India, located in Hyderabad, Telangana, India. One of the 4 campuses of the BITS Pilani university, it commenced in 2008 with the first batch graduating in 2012.
+			</template>
+
+	</category>
+
+	<category>
+
+			<pattern>ABOUT PILANI CAMPUS</pattern>
+			<template>The oldest campus of BITS. Located in Pilani, Rajasthan.
+			</template>
+
+	</category>
+
+	<category>
+
+			<pattern>ABOUT GOA CAMPUS</pattern>
+			<template>According to Wikipedia, Birla Institute of Technology and Science, Pilani – Goa Campus (BPGC), also known as BITS Pilani, Goa Campus or Birla Institute of Technology and Science, Pilani K. K. Birla Goa Campus, is a technical and science institute for higher education in located in Goa, India. Established in 2004, it is one of the four campuses of the BITS Pilani. The Aditya Birla Group privately supports the residential features of the institute.
+			</template>
+
+	</category>
+
+	<category>
+
+			<pattern>ABOUT DUBAI CAMPUS</pattern>
+			<template>According to Wikipedia, BITS Pilani, Dubai Campus or irla Institute of Technology and Science, Pilani – Dubai Campus and BPDC) is a private technical university located in Dubai, United Arab Emirates. It is a campus of BITS Pilani. It offers undergraduate, graduate and research courses in engineering, sciences and management.
+			</template>
+
+	</category>
+
+	<category>
+
+		<pattern>OTHER CAMPUSES LOCATION</pattern>
+		<template>Pilani, Goa and Dubai
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>HYDERABAD CAMPUS LOCATION</pattern>
+		<template>The address: Jawahar Nagar, Shameerpet Mandal, Hyderabad, Telangana 500078.
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>DEGREES</pattern>
+		<template>
+			B.E.(Hons)\n
+			B.Pharm.(Hons)\n
+			Msc.(Hons)\n
+			Msc.(Tech)\n
+			M.E.\n
+			M.Pharm.\n
+			M.Phil.\n
+			On-Campus-Ph.D\n
+			Off-Campus-Ph.D\n
+			part-time-Ph.D\n
+		</template>
+
+	</category>
+
+	<category>
+
+		<pattern>DEPARTMENTS</pattern>
+		<template>
+			Biologial Sciences\n
+			Chemistry\n
+			Chemical Engineering\n
+			Civil Engineering\n
+			Computer Science and Information Systems\n
+			Economics and Finance\n
+			Electrical and Electonics Engineering\n
+			Humanities and Social Sciences\n
+			Mathematics\n
+			Physics\n
+			Pharmacy\n
+		</template>
+
+	</category>
+
+	<topic name="CS">
+
+		<category>
+
+			<pattern>CS</pattern>
+			<template>The Department of Computer Science and Information Systems at BITS Hyderabad strives to produce engineers of tomorrow by imparting instruction with advanced curriculum, and research methodologies in modern areas of Computer Science.
+			</template>
+
+		</category>
+
+		<category>
+
+			<pattern>FACULTY</pattern>
+			<template>Please visit the webpage: http://www.bits-pilani.ac.in/hyderabad/computerscience/Faculty for further details
+			</template>
+
+		</category>
+
+		<category>
+
+			<pattern>REACHUS</pattern>
+			<template>Please visit the University website: http://www.bits-pilani.ac.in/Hyderabad/index.aspx for further details.
+			</template>
+
+		</category>
+
+		<category>
+
+			<pattern>EXTRAINFO</pattern>
+			<template>Please visit CS Department site: http://www.bits-pilani.ac.in/hyderabad/computerscience/ComputerScience for further information.
+			</template>
+
+		</category>
+
+	</topic>
+
+</aiml>
