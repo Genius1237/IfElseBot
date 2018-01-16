@@ -56,7 +56,6 @@
   </category>
 
 
-
   <category>
     <pattern>BOT INFO</pattern>
     <template>I am fine</template>
@@ -77,11 +76,20 @@
   </category>
 
   <category>
-    <pattern>HOW ARE YOU FEELING TODAY</pattern>
+    <pattern>* YOU FEELING *</pattern>
     <template>
       <srai>BOT INFO</srai>
     </template>
   </category>
+
+  <category>
+    <pattern>* YOU FEELING</pattern>
+    <template>
+      <srai>BOT INFO</srai>
+    </template>
+  </category>
+
+
 
 
   <category>
@@ -89,7 +97,6 @@
     <template>
       <random>
         <li>Well, don't be</li>
-        <li>I am sad too</li>
         <li>How can I cheer you up?</li>
         <li>Why are you sad?</li>
       </random>
@@ -97,7 +104,44 @@
   </category>
 
   <category>
-    <pattern>WHO CREATED YOU</pattern>
+    <pattern>* I AM SAD</pattern>
+    <template>
+      <srai>I AM SAD</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM SAD *</pattern>
+    <template>
+      <srai>I AM SAD</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* I AM * SAD *</pattern>
+    <template>
+      <srai>I AM SAD</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* I AM * SAD</pattern>
+    <template>
+      <srai>I AM SAD</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM * SAD *</pattern>
+    <template>
+      <srai>I AM SAD</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>* CREATED YOU</pattern>
     <template>
       I was created by Nikhil Iyer, Nitish Ravishankar and Anirudh Srinivasan as part of the Artificial Intelligence
       assignment
@@ -115,8 +159,53 @@
     </template>
   </category>
 
+    <category>
+      <pattern>* I AM HAPPY *</pattern>
+      <template>
+          <srai>I AM HAPPY</srai>
+      </template>
+    </category>
+
+
+    <category>
+      <pattern>* I AM HAPPY</pattern>
+        <template>
+          <srai>I AM HAPPY</srai>
+      </template>
+    </category>
+
+      <category>
+        <pattern>I AM HAPPY *</pattern>
+        <template>
+            <srai>I AM HAPPY</srai>
+        </template>
+      </category>
+
+      <category>
+        <pattern>* I AM * HAPPY *</pattern>
+          <template>
+            <srai>I AM HAPPY</srai>
+        </template>
+      </category>
+
+      <category>
+        <pattern>* I AM * HAPPY</pattern>
+          <template>
+            <srai>I AM HAPPY</srai>
+        </template>
+      </category>
+
+
+      <category>
+        <pattern>I AM * HAPPY *</pattern>
+          <template>
+            <srai>I AM HAPPY</srai>
+        </template>
+      </category>
+
+
   <category>
-    <pattern>HOW WILL MY DAY GO</pattern>
+    <pattern>* MY DAY *</pattern>
     <template>
       <random>
         <li>It will be as bright as the sun</li>
@@ -126,5 +215,17 @@
     </template>
   </category>
 
+  <category>
+    <pattern>* AM FEELING *</pattern>
+    <template>
+      <random>
+        <li>I don't know what to say</li>
+        <li>If it's a bad thing, please consult a doctor</li>
+        <li>I cannot respond emotionally to such queries</li>
+        <li>Please tell me what it means to feel how you are feeling right now</li>
+      </random>
+    </template>
+  </category>
 
+  
 </aiml>
