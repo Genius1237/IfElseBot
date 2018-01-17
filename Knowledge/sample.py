@@ -2,6 +2,7 @@ import aiml
 import os
 import random
 import time
+import pyttsx3
 
 def evaulateExpression(fexp):
     expstr = fexp.replace(' ','')
@@ -10,6 +11,7 @@ def evaulateExpression(fexp):
 
 # Create the kernel and learn AIML files
 kernel = aiml.Kernel()
+engine = pyttsx3.init()
 
 if os.path.isfile("bot_brain.brn"): 
     kernel.bootstrap(brainFile = "bot_brain.brn")
@@ -34,12 +36,16 @@ while True:
             print(bot_response)
             continue
         print(bot_response)
+        engine.say(bot_response)
+        engine.runAndWait()
         inp = kernel.getPredicate('ctype')
         if(inp=="1"):
             time.sleep(1)
             kernel.setPredicate('expression',str(evaulateExpression(kernel.getPredicate('expression'))))
             bot_response = kernel.respond('results')
             print(bot_response)
+            engine.say(bot_response)
+            engine.runAndWait()
 
         elif(inp=="2"):
             time.sleep(1)
@@ -50,7 +56,9 @@ while True:
                 kernel.setPredicate('expression',"Tails")
 
             bot_response = kernel.respond('toss outcome')
-            print(bot_response) 	
+            print(bot_response)
+            engine.say(bot_response)
+            engine.runAndWait() 	
 
 
         elif(inp=='3' or inp=='4'):
@@ -63,7 +71,11 @@ while True:
             kernel.setPredicate('expression',str(num))
             bot_response = kernel.respond('die outcome')
             print(bot_response)
+            engine.say(bot_response)
+            engine.runAndWait()
 
         elif(len(bot_response)<2):
             bot_response="i don't know what you are talking about"
             print(bot_response)
+            engine.say(bot_response)
+            engine.runAndWait()
