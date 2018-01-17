@@ -155,6 +155,7 @@
         <li>Good for you</li>
         <li>Great!</li>
         <li>Being happy is crucial for a healthy life</li>
+        <li>That's the spirit!!!</li>
       </random>
     </template>
   </category>
@@ -227,5 +228,5 @@
     </template>
   </category>
 
-  
+
 </aiml>

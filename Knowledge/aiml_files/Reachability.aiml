@@ -25,11 +25,34 @@
     </category>
 
     <category>
+      <pattern>* LONG DOES IT TAKE</pattern>
+      <template>
+        <srai>TIME DURATION</srai>
+      </template>
+    </category>
+
+    <category>
       <pattern>* TIME TAKEN *</pattern>
       <template>
         <srai>TIME DURATION</srai>
       </template>
     </category>
+
+    <category>
+      <pattern>* TIME TAKEN</pattern>
+      <template>
+        <srai>TIME DURATION</srai>
+      </template>
+    </category>
+
+
+    <category>
+      <pattern>TIME TAKEN *</pattern>
+      <template>
+        <srai>TIME DURATION</srai>
+      </template>
+    </category>
+
 
 
     <category>
@@ -47,7 +70,7 @@
     </category>
 
     <category>
-      <pattern>* COST ?</pattern>
+      <pattern>* COST</pattern>
       <template>
         <srai>COST</srai>
       </template>

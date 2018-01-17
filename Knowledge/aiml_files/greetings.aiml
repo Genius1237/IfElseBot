@@ -15,6 +15,15 @@
   </category>
 
   <category>
+    <pattern>HI</pattern>
+    <template>
+      <srai>HELLO</srai>
+    </template>
+  </category>
+
+
+
+  <category>
     <pattern>HELLO *</pattern>
     <template>
       <srai>HELLO</srai>
@@ -56,6 +65,28 @@
       <srai>BYE</srai>
     </template>
   </category>
+
+  <category>
+    <pattern>GOODBYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* GOODBYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
+
+    <category>
+      <pattern>GOODBYE *</pattern>
+      <template>
+        <srai>BYE</srai>
+      </template>
+    </category>
 
 
 </aiml>
