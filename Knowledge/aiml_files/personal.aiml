@@ -207,8 +207,8 @@
 
   <category>
     <pattern>* MY DAY *</pattern>
+    <random>
     <template>
-      <random>
         <li>It will be as bright as the sun</li>
         <li>It will definitely be better than yesterday</li>
         <li>You might find today to be the best day you have ever had</li>
@@ -228,5 +228,48 @@
     </template>
   </category>
 
+  <category>
+    <pattern>I LIVE IN *</pattern>
+    <template>
+      <think>
+        <set name="city"><star/></set>
+      </think>
+      Beautiful place
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>BOT ACTIVITIES</pattern>
+    <template>
+      <random>
+        <li>I love to chat with people</li>
+        <li>Bots are only trained to respond to user queries</li>
+        <li>Nothing much.Just chilling</li>
+        <li>I like to know more about the various users who chat with me</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* PASS YOUR TIME</pattern>
+    <template>
+      <srai>BOT ACTIVITIES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* YOU ENJOY</pattern>
+    <template>
+      <srai>BOT ACTIVITIES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* FREE TIME</pattern>
+    <template>
+      <srai>BOT ACTIVITIES</srai>
+    </template>
+  </category>
 
 </aiml>
