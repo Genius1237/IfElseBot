@@ -23,8 +23,8 @@ dblistQuery = "SELECT NAME FROM sqlite_master WHERE TYPE=\"table\";"
 getuquid = "SELECT * FROM qidvals;"
 insertQuery1b = "INSERT INTO chat_history values ("
 insertQuery2b = "INSERT INTO unknown values ("
-updateQueryQid = "UPDATE qidvals SET (kqid, ukqid) VALUES ("
-updateQueryQidend = ") WHERE qid=0;"
+updateQueryQid = "UPDATE qidvals SET "
+updateQueryQidend = " WHERE qid=0;"
 tlist_names = obj.getQuery(dblistQuery)
 flag = False
 for name in tlist_names:
@@ -54,6 +54,8 @@ querystring=""
 
 # Handles CTRL+C
 def sigint_handler(signum,frame):
+	querystring=updateQueryQid+"kqid = "+str(qid)+","+"ukqid = "+str(unknown_qid)+updateQueryQidend
+	obj.putQuery(querystring)
 	obj.closeConnection()
 	exit()
 
@@ -63,6 +65,8 @@ while True:
     if(len(message)<1):
     	continue
     if message == "quit":
+        querystring=updateQueryQid+"kqid = "+str(qid)+","+"ukqid = "+str(unknown_qid)+updateQueryQidend
+        obj.putQuery(querystring)
         obj.closeConnection()
         exit()
     elif message == "save":
