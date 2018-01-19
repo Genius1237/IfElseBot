@@ -21,7 +21,7 @@
   <category>
     <pattern>BOT NAME</pattern>
     <template>
-      My name is J.A.R.V.I.S
+      My name is JARVIS
     </template>
   </category>
 
@@ -208,7 +208,9 @@
   <category>
     <pattern>* MY DAY *</pattern>
     <template>
-    <random>
+
+      <random>
+
         <li>It will be as bright as the sun</li>
         <li>It will definitely be better than yesterday</li>
         <li>You might find today to be the best day you have ever had</li>
@@ -271,5 +273,6 @@
       <srai>BOT ACTIVITIES</srai>
     </template>
   </category>
+
 
 </aiml>
