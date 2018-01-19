@@ -69,7 +69,7 @@ while True:
     signal.signal(signal.SIGINT, sigint_handler)
     message = input("Enter your message to the bot: ")
     if(len(sys.argv)<=1):
-    	sys.argv.append("Enable-Voice")
+    	sys.argv.append("enable-voice")
     if(len(message)<1):
     	continue
     if message == "quit":
