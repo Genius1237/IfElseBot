@@ -211,6 +211,5 @@ while True:
             querystring=insertQuery2b+str(unknown_qid)+",\""+message+"\""+",\""+bot_response+"\");"
             #print(querystring)
             obj.putQuery(querystring)
-            engine.say("Okay, thank you for telling me about it")
             speakOut("Okay, thank you for telling me about it",sys.argv[1])
             continue
