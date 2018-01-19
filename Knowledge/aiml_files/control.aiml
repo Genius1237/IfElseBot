@@ -1,0 +1,11 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- control.aiml -->
+
+<topic name="eagertoknow">
+	<category>
+		<pattern>THAT IS *</pattern>
+		<template>Okay, thank you for telling me about it<think><set name="unknown"><star/></set><set name="topic">default</set></think>
+		</template>
+	</category>
+</topic>
+</aiml>

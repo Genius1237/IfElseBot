@@ -13,6 +13,7 @@
             <learn>aiml_files/math.aiml</learn>
             <learn>aiml_files/offeredcourses.aiml</learn>
             <learn>aiml_files/online.aiml</learn>
+            <learn>aiml_files/control.aiml</learn>
             <learn>aiml_files/.aiml</learn>
         </template>
 
