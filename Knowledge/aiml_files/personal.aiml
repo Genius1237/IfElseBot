@@ -207,8 +207,8 @@
 
   <category>
     <pattern>* MY DAY *</pattern>
-    <random>
     <template>
+    <random>
         <li>It will be as bright as the sun</li>
         <li>It will definitely be better than yesterday</li>
         <li>You might find today to be the best day you have ever had</li>
@@ -232,7 +232,7 @@
     <pattern>I LIVE IN *</pattern>
     <template>
       <think>
-        <set name="city"><star/></set>
+        <set name="home_city"><star/></set>
       </think>
       Beautiful place
     </template>

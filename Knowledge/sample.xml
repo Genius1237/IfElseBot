@@ -3,15 +3,16 @@
 
         <pattern>LOAD AIML B</pattern>
 
-				<template>
+		<template>
             <learn>aiml_files/greetings.aiml</learn>
             <learn>aiml_files/Reachability.aiml</learn>
             <learn>aiml_files/fests.aiml</learn>
             <learn>aiml_files/personal.aiml</learn>
-						<learn>aiml_files/about_bits.aiml</learn>
+			<learn>aiml_files/about_bits.aiml</learn>
             <learn>aiml_files/eateries.aiml</learn>
             <learn>aiml_files/math.aiml</learn>
             <learn>aiml_files/offeredcourses.aiml</learn>
+            <learn>aiml_files/online.aiml</learn>
             <learn>aiml_files/.aiml</learn>
         </template>
 

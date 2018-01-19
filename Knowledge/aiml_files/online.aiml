@@ -1,0 +1,44 @@
+<aiml version="1.0.1" encoding="UTF-8">
+   <category>
+    <pattern>WHAT IS THE WEATHER LIKE</pattern>
+    <template>
+      Let me check that for you
+      <think>
+        <set name="ctype">5</set>
+      </think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS THE WEATHER IN *</pattern>
+    <template>
+      Let me check that for you
+      <think>
+        <set name="city"><star/></set>
+        <set name="ctype">6</set>
+      </think>
+    </template>
+  </category>
+
+   <category>
+    <pattern>WHAT IS THE FORECAST LIKE</pattern>
+    <template>
+      Let me check that for you
+      <think>
+        <set name="ctype">7</set>
+      </think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS THE FORECAST FOR *</pattern>
+    <template>
+      Let me check that for you
+      <think>
+        <set name="city"><star/></set>
+        <set name="ctype">8</set>
+      </think>
+    </template>
+  </category>
+
+</aiml>
