@@ -4,8 +4,11 @@ import random
 import time
 import pyttsx3
 from weather import Weather
+from news import News
 from DBconnect import *
 import signal
+import datetime
+
 
 def evaulateExpression(fexp):
     expstr = fexp.replace(' ','')
@@ -38,8 +41,9 @@ if(flag==False):
 #obj.putQuery("CREATE TABLE IF NOT EXISTS qidvals (qid integer PRIMARY KEY default 0, kqid integer default 0, ukqid integer default 0);")
 
 if os.path.isfile("bot_brain.brn"): 
-    kernel.bootstrap(brainFile = "bot_brain.brn")
-else:
+    #kernel.bootstrap(brainFile = "bot_brain.brn")
+    pass
+if 1==1:
     kernel.bootstrap(learnFiles = "sample.xml", commands = "load aiml b")
     #kernel.bootstrap(learnFiles = "sample.xml", commands = "load math")
     kernel.saveBrain("bot_brain.brn")
@@ -166,7 +170,7 @@ while True:
             engine.runAndWait()
 
         elif inp=='7' or inp=='8' :
-            if inp=='5':
+            if inp=='7':
                 city=kernel.getPredicate('home_city')
                 if city is "":
                     city="Secunderabad"
@@ -175,10 +179,10 @@ while True:
 
             w=Weather.get_5_day_forecast(city)
             if w['success']:
-                bot_response="The forecast for {} is as follows\n".format(city)
+                bot_response="The forecast for {} is as follows\n".format(w['place'])
                 for a in w['w']:
-                    bot_response=""
-                    #bot_response+=("{} {} {}, {} with a temperature of {} and humidity of {}%\n".format(a['desc'],a['temp'],a['humidity']))
+                    d=datetime.datetime.strptime(a['date'],"%Y-%m-%d %H:%M:%S").date()
+                    bot_response+=("{} {} {}, {} with a temperature of {} and humidity of {}%\n".format(d.day,d.month,d.year,a['desc'],a['temp'],a['humidity']))
 
             else:
                 bot_response="Sorry, couldn't get the forecast"
@@ -188,6 +192,26 @@ while True:
             obj.putQuery(querystring)
             print(bot_response)
             engine.say(bot_response)
+            engine.runAndWait()
+
+        elif inp=='9':
+            n=News.get_india_top_headlines()
+            if n['success']:
+                bot_response=""
+                bot_speech=""
+                for a in n['a']:
+                    bot_response+="{}\n{}\n".format(a['title'],a['url'])
+                    bot_speech+="{}\n".format(a['title'])
+                
+            else:
+                bot_response="Sorry, couldn't get the news"
+                bot_speech=bot_response
+
+            qid=qid+1
+            querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
+            obj.putQuery(querystring)
+            print(bot_response)
+            engine.say(bot_speech)
             engine.runAndWait()
 
 

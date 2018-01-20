@@ -41,4 +41,14 @@
     </template>
   </category>
 
+<category>
+    <pattern>WHAT IS THE LATEST NEWS IN INDIA</pattern>
+    <template>
+      Let me check that for you
+      <think>
+        <set name="ctype">9</set>
+      </think>
+    </template>
+  </category>
+
 </aiml>
