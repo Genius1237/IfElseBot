@@ -5,6 +5,7 @@ import time
 import pyttsx3
 from weather import Weather
 from news import News
+from google import Search
 from DBconnect import *
 import signal
 import datetime
@@ -87,11 +88,7 @@ while True:
             time.sleep(1)
             kernel.setPredicate('expression',str(evaulateExpression(kernel.getPredicate('expression'))))
             bot_response = kernel.respond('results')
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_response,sys.argv[1])
+            bot_speech=bot_response
 
         elif inp=="2":
             time.sleep(1)
@@ -102,12 +99,7 @@ while True:
                 kernel.setPredicate('expression',"Tails")
 
             bot_response = kernel.respond('toss outcome')
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_response,sys.argv[1]) 	
-
+            bot_speech=bot_response
 
         elif inp=='3' or inp=='4':
             time.sleep(1)
@@ -118,11 +110,7 @@ while True:
                 num = random.randint(1,uval)
             kernel.setPredicate('expression',str(num))
             bot_response = kernel.respond('die outcome')
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_response,sys.argv[1])
+            bot_speech=bot_response
 
         elif inp=='5' or inp=='6':
             if inp=='5':
@@ -139,11 +127,8 @@ while True:
             
             else:
                 bot_response="Sorry, couldn't get the weather"
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_response,sys.argv[1])
+
+            bot_speech=bot_response
 
         elif inp=='7' or inp=='8' :
             if inp=='7':
@@ -163,11 +148,7 @@ while True:
             else:
                 bot_response="Sorry, couldn't get the forecast"
 
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_response,sys.argv[1])
+            bot_speech=bot_response
 
         elif inp=='9' or inp=='10':
             news=kernel.getPredicate('news')
@@ -192,13 +173,15 @@ while True:
                 bot_response="Sorry, couldn't get the news"
                 bot_speech=bot_response
 
-            
-            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-            obj.putQuery(querystring)
-            print(bot_response)
-            speakOut(bot_speech,sys.argv[1])
-
         elif len(bot_response)<2:
+            '''
+            s=Search.make_request(q)
+            if s['success']:
+                #got something. Answer is s['d']
+            else:
+                #search fail
+            '''
+
             bot_response="i did not understand, what is that?"
             
             querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
@@ -211,3 +194,9 @@ while True:
             querystring=insertQuery2b+"\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             speakOut("Okay, thank you for telling me about it",sys.argv[1])
+            continue
+        
+        querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
+        obj.putQuery(querystring)
+        print(bot_response)
+        speakOut(bot_speech,sys.argv[1])
