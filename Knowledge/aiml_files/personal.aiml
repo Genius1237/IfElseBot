@@ -236,7 +236,12 @@
       <think>
         <set name="home_city"><star/></set>
       </think>
-      Beautiful place
+      <random>
+      	<li>Beautiful place</li>
+      	<li>It is a great place</li>
+      	<li>Oh that's cool</li>
+      	<li>Nice, that's a great place to live</li>
+  	  </random>
     </template>
   </category>
 

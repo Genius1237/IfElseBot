@@ -2,7 +2,11 @@
    <category>
     <pattern>WHAT IS THE WEATHER LIKE</pattern>
     <template>
-      Let me check that for you
+      <random>
+        <li>Let me check that for you</li>
+        <li>Getting the most recent update</li>
+        <li>Checking...</li>
+      </random>
       <think>
         <set name="ctype">5</set>
       </think>
@@ -12,7 +16,11 @@
   <category>
     <pattern>WHAT IS THE WEATHER IN *</pattern>
     <template>
-      Let me check that for you
+      <random>
+        <li>Let me check that for you</li>
+        <li>Getting the most recent update</li>
+        <li>Checking...</li>
+      </random>
       <think>
         <set name="city"><star/></set>
         <set name="ctype">6</set>
@@ -23,7 +31,11 @@
    <category>
     <pattern>WHAT IS THE FORECAST LIKE</pattern>
     <template>
-      Let me check that for you
+      <random>
+        <li>Let me check that for you</li>
+        <li>Getting the most recent update</li>
+        <li>Checking...</li>
+      </random>
       <think>
         <set name="ctype">7</set>
       </think>
@@ -33,7 +45,11 @@
   <category>
     <pattern>WHAT IS THE FORECAST FOR *</pattern>
     <template>
-      Let me check that for you
+      <random>
+        <li>Let me check that for you</li>
+        <li>Getting the most recent update</li>
+        <li>Checking...</li>
+      </random>
       <think>
         <set name="city"><star/></set>
         <set name="ctype">8</set>

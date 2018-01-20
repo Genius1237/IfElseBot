@@ -8,7 +8,7 @@ from news import News
 from DBconnect import *
 import signal
 import datetime
-
+import sys
 
 def evaulateExpression(fexp):
     expstr = fexp.replace(' ','')
@@ -26,8 +26,8 @@ dblistQuery = "SELECT NAME FROM sqlite_master WHERE TYPE=\"table\";"
 getuquid = "SELECT * FROM qidvals;"
 insertQuery1b = "INSERT INTO chat_history values ("
 insertQuery2b = "INSERT INTO unknown values ("
-updateQueryQid = "UPDATE qidvals SET (kqid, ukqid) VALUES ("
-updateQueryQidend = ") WHERE qid=0;"
+updateQueryQid = "UPDATE qidvals SET "
+updateQueryQidend = " WHERE qid=0;"
 tlist_names = obj.getQuery(dblistQuery)
 flag = False
 for name in tlist_names:
@@ -53,20 +53,31 @@ defvals= obj.getQuery(getuquid)[0]
 #print(defvals)
 qid=int(defvals[1])
 unknown_qid=int(defvals[2])
-querystring="" 
+querystring=""
 
 
 # Handles CTRL+C
 def sigint_handler(signum,frame):
+	querystring=updateQueryQid+"kqid = "+str(qid)+","+"ukqid = "+str(unknown_qid)+updateQueryQidend
+	obj.putQuery(querystring)
 	obj.closeConnection()
 	exit()
+
+def speakOut(output,param="enable-voice"):
+    if(param=="enable-voice"):
+    	engine.say(output)
+    	engine.runAndWait()
 
 while True:
     signal.signal(signal.SIGINT, sigint_handler)
     message = input("Enter your message to the bot: ")
+    if(len(sys.argv)<=1):
+    	sys.argv.append("enable-voice")
     if(len(message)<1):
     	continue
     if message == "quit":
+        querystring=updateQueryQid+"kqid = "+str(qid)+","+"ukqid = "+str(unknown_qid)+updateQueryQidend
+        obj.putQuery(querystring)
         obj.closeConnection()
         exit()
     elif message == "save":
@@ -80,8 +91,7 @@ while True:
             qid=qid+1
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
             print(bot_response)
             kernel.setPredicate('topic',"eagertoknow")
             #print(kernel.getPredicate('topic'))
@@ -92,16 +102,14 @@ while True:
             querystring=insertQuery2b+str(unknown_qid)+",\""+message+"\""+",\""+bot_response+"\");"
             #print(querystring)
             obj.putQuery(querystring)
-            engine.say("Okay, thank you for telling me about it")
-            engine.runAndWait()
+            speakOut("Okay, thank you for telling me about it",sys.argv[1])
             continue
 
         print(bot_response)
         qid=qid+1
         querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
         obj.putQuery(querystring)
-        engine.say(bot_response)
-        engine.runAndWait()
+        speakOut(bot_response,sys.argv[1])
         inp = kernel.getPredicate('ctype')
         if inp=="1" :
             time.sleep(1)
@@ -111,8 +119,7 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
 
         elif inp=="2":
             time.sleep(1)
@@ -127,8 +134,7 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_response)
-            engine.runAndWait() 	
+            speakOut(bot_response,sys.argv[1]) 	
 
 
         elif inp=='3' or inp=='4':
@@ -144,8 +150,7 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
 
         elif inp=='5' or inp=='6':
             if inp=='5':
@@ -166,8 +171,7 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
 
         elif inp=='7' or inp=='8' :
             if inp=='7':
@@ -191,8 +195,7 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
 
         elif inp=='9':
             n=News.get_india_top_headlines()
@@ -211,17 +214,14 @@ while True:
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             print(bot_response)
-            engine.say(bot_speech)
-            engine.runAndWait()
-
+            speakOut(bot_speech,sys.argv[1])
 
         elif len(bot_response)<2:
             bot_response="i did not understand, what is that?"
             qid=qid+1
             querystring=insertQuery1b+str(qid)+",\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
-            engine.say(bot_response)
-            engine.runAndWait()
+            speakOut(bot_response,sys.argv[1])
             print(bot_response)
             kernel.setPredicate('topic',"eagertoknow")
             #print(kernel.getPredicate('topic'))
@@ -232,6 +232,5 @@ while True:
             querystring=insertQuery2b+str(unknown_qid)+",\""+message+"\""+",\""+bot_response+"\");"
             #print(querystring)
             obj.putQuery(querystring)
-            engine.say("Okay, thank you for telling me about it")
-            engine.runAndWait()
+            speakOut("Okay, thank you for telling me about it",sys.argv[1])
             continue
