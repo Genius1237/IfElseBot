@@ -10,6 +10,7 @@ from DBconnect import *
 import signal
 import datetime
 import sys
+import string
 
 def evaulateExpression(fexp):
     expstr = fexp.replace(' ','')
@@ -65,18 +66,48 @@ while True:
         kernel.setPredicate('ctype',0)
         bot_response = kernel.respond(message)
         if len(bot_response)<2:
-            bot_response="i did not understand, what is that?"            
+            # bot_response="i did not understand, what is that?"            
+            # querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
+            # obj.putQuery(querystring)
+            # speakOut(bot_response,sys.argv[1])
+            # print(bot_response)
+            # kernel.setPredicate('topic',"eagertoknow")
+            # bot_response = input("Enter your message to the bot: ")
+            # print("Okay, thank you for telling me about it")
+            
+            # querystring=insertQuery2b+"\""+message+"\""+",\""+bot_response+"\");"
+            # obj.putQuery(querystring)
+            # speakOut("Okay, thank you for telling me about it",sys.argv[1])
+            bot_response="i did not understand, want to search google for it?"
+            
             querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             speakOut(bot_response,sys.argv[1])
             print(bot_response)
             kernel.setPredicate('topic',"eagertoknow")
             bot_response = input("Enter your message to the bot: ")
-            print("Okay, thank you for telling me about it")
-            
-            querystring=insertQuery2b+"\""+message+"\""+",\""+bot_response+"\");"
+            if(bot_response.lower()=="YES".lower()):
+            	bot_response="Okay let me see..."
+            	print(bot_response)
+            	querystring=insertQuery1b+"\"Yes\", \""+bot_response+"\");"
+            	obj.putQuery(querystring)
+            	speakOut(bot_response,sys.argv[1])
+            	s=Search.make_request(message)
+            	if s['success']:
+            		print("Got something.. Answer is "+s['d'])
+            		bot_response="Got something.. Answer is "+s['d']
+            		querystring=insertQuery2b+"\""+message+"\""+",\""+s['d']+"\");"
+            		obj.putQuery(querystring)
+            		speakOut(bot_response,sys.argv[1])
+
+            	else:
+            		print("Search Failed")
+            		bot_response=bot_response+"Search Failed"
+            		speakOut(bot_response,sys.argv[1])
+
+         
+            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
-            speakOut("Okay, thank you for telling me about it",sys.argv[1])
             continue
 
         print(bot_response)        
@@ -182,7 +213,7 @@ while True:
                 #search fail
             '''
 
-            bot_response="i did not understand, what is that?"
+            bot_response="i did not understand, want to search google for it?"
             
             querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
@@ -190,13 +221,28 @@ while True:
             print(bot_response)
             kernel.setPredicate('topic',"eagertoknow")
             bot_response = input("Enter your message to the bot: ")
-            print("Okay, thank you for telling me about it")            
-            querystring=insertQuery2b+"\""+message+"\""+",\""+bot_response+"\");"
+            if(bot_response.lower()=="YES".lower()):
+            	bot_response="Ok, let me see..."
+            	print(bot_response)
+            	querystring=insertQuery1b+"\"Yes\","+bot_response+"\");"
+            	obj.putQuery(querystring)
+            	speakOut(bot_response,sys.argv[1])
+            	s=Search.make_request(message)
+            	if s['success']:
+            		print("Got something.. Answer is "+s['d'])
+            		bot_response=bot_response+"Got something.. Answer is "+s['d']
+            		for c in string.punctuation:
+            			s['d'].replace(c,'')
+            		querystring=insertQuery2b+"\""+message+"\""+",\""+s['d']+"\");"
+            		speakOut(bot_response,sys.argv[1])
+
+            	else:
+            		print("Search Failed")
+            		bot_response="Search Failed"
+            		speakOut(bot_response,sys.argv[1])
+
+         
+            querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
             obj.putQuery(querystring)
             speakOut("Okay, thank you for telling me about it",sys.argv[1])
             continue
-        
-        querystring=insertQuery1b+"\""+message+"\""+",\""+bot_response+"\");"
-        obj.putQuery(querystring)
-        print(bot_response)
-        speakOut(bot_speech,sys.argv[1])
