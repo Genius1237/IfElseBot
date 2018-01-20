@@ -63,7 +63,7 @@ def sigint_handler(signum,frame):
 	obj.closeConnection()
 	exit()
 
-def speakOut(output,param="enable-voice"):
+def speakOut(output,param=""):
     if(param=="enable-voice"):
     	engine.say(output)
     	engine.runAndWait()
@@ -186,7 +186,7 @@ while True:
                 bot_response="The forecast for {} is as follows\n".format(w['place'])
                 for a in w['w']:
                     d=datetime.datetime.strptime(a['date'],"%Y-%m-%d %H:%M:%S").date()
-                    bot_response+=("{} {} {}, {} with a temperature of {} and humidity of {}%\n".format(d.day,d.month,d.year,a['desc'],a['temp'],a['humidity']))
+                    bot_response+=("{} {} {}, {} with a temperature of {} celcius and humidity of {}%\n".format(d.day,d.month,d.year,a['desc'],a['temp'],a['humidity']))
 
             else:
                 bot_response="Sorry, couldn't get the forecast"
@@ -197,13 +197,23 @@ while True:
             print(bot_response)
             speakOut(bot_response,sys.argv[1])
 
-        elif inp=='9':
-            n=News.get_india_top_headlines()
+        elif inp=='9' or inp=='10':
+            news=kernel.getPredicate('news')
+            if news!="":
+                if inp=='9':
+                    n=News.get_india_top_headlines(news)
+                else:
+                    n=News.get_world_top_headlines(news)
+            else:
+                if inp=='9':
+                    n=News.get_india_top_headlines()
+                else:
+                    n=News.get_world_top_headlines()
             if n['success']:
                 bot_response=""
                 bot_speech=""
                 for a in n['a']:
-                    bot_response+="{}\n{}\n".format(a['title'],a['url'])
+                    bot_response+="{}\n{}\n\n".format(a['title'],a['url'])
                     bot_speech+="{}\n".format(a['title'])
                 
             else:

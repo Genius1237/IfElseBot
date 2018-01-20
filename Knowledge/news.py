@@ -39,7 +39,7 @@ class News():
 
 	def process_query(url,q="",country=""):
 		j=News.make_request(url,q,country)
-		
+
 		if j['success']:
 			j=j['j']
 			a=[]
@@ -75,7 +75,7 @@ class News():
 		return News.process_query("{}everything".format(News.base_url),q)
 
 	def get_world_top_headlines(q=""):
-		return News.process_query("{}top-headlines".format(News.base_url),q)
+		return News.process_query("{}top-headlines".format(News.base_url),q,'us')
 	
 	def get_india_top_headlines(q=""):
 		return News.process_query("{}top-headlines".format(News.base_url),q,'in')	

@@ -29,7 +29,7 @@
   </category>
 
    <category>
-    <pattern>WHAT IS THE FORECAST LIKE</pattern>
+    <pattern>* FORECAST LIKE</pattern>
     <template>
       <random>
         <li>Let me check that for you</li>
@@ -43,7 +43,7 @@
   </category>
 
   <category>
-    <pattern>WHAT IS THE FORECAST FOR *</pattern>
+    <pattern>* FORECAST FOR *</pattern>
     <template>
       <random>
         <li>Let me check that for you</li>
@@ -51,19 +51,111 @@
         <li>Checking...</li>
       </random>
       <think>
-        <set name="city"><star/></set>
+        <set name="city"><star index="2"/></set>
         <set name="ctype">8</set>
       </think>
     </template>
   </category>
 
-<category>
-    <pattern>WHAT IS THE LATEST NEWS IN INDIA</pattern>
-    <template>
+  <category>
+    <pattern>NEWS</pattern>
+      <template>
       Let me check that for you
-      <think>
-        <set name="ctype">9</set>
-      </think>
+        <think>
+          <set name="ctype">10</set>
+          <set name="news"></set>
+        </think>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* LATEST NEWS</pattern>
+      <template>
+        <srai>NEWS</srai>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* NEWS</pattern>
+    <template>
+      <srai>NEWS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NEWS ABOUT</pattern>
+      <template>
+      Let me check that for you
+        <think>
+          <set name="ctype">10</set>
+        </think>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* LATEST NEWS ABOUT *</pattern>
+    <template>
+      <srai>NEWS ABOUT</srai>
+      <think><set name="news"><star index="2"/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* NEWS ABOUT *</pattern>
+    <template>
+      <srai>NEWS ABOUT</srai>
+      <think><set name="news"><star index="2"/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NEWS INDIA</pattern>
+      <template>
+      Let me check that for you
+        <think>
+          <set name="ctype">9</set>
+          <set name="news"></set>
+        </think>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* LATEST NEWS IN INDIA</pattern>
+      <template>
+        <srai>NEWS INDIA</srai>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* NEWS IN INDIA</pattern>
+    <template>
+      <srai>NEWS INDIA</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NEWS INDIA ABOUT</pattern>
+      <template>
+      Let me check that for you
+        <think>
+          <set name="ctype">10</set>
+        </think>
+      </template>
+  </category>
+
+  <category>
+    <pattern>* LATEST NEWS IN INDIA ABOUT *</pattern>
+    <template>
+      <srai>NEWS INDIA ABOUT</srai>
+      <think><set name="news"><star index="2"/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* NEWS IN INDIA ABOUT *</pattern>
+    <template>
+      <srai>NEWS INDIA ABOUT</srai>
+      <think><set name="news"><star index="2"/></set></think>
     </template>
   </category>
 
