@@ -1,4 +1,9 @@
-# Chatbot - CS F401 Assignment 1
+# Chatbot - CS F407 Assignment 1
+
+### To install dependencies
+```
+pip install python-aiml pyttsx3
+```
 
 ### To run the chatbot:
 python3 Knowledge/sample.py

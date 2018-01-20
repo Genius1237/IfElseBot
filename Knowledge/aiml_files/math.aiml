@@ -129,6 +129,55 @@
 
 	</category>
 
+
+	<category>
+		<pattern>THROW A DIE</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>THROW A DIE *</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* THROW A DIE</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* THROW A DIE *</pattern>
+		<template><think><set name="ctype">3</set></think><srai>STANDARD DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>THROW A * SIDED DIE</pattern>
+		<template><think><set name="expression"><star/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>THROW A * SIDED DIE *</pattern>
+		<template><think><set name="expression"><star index="1"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* THROW A * SIDED DIE</pattern>
+		<template><think><set name="expression"><star index="2"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
+	<category>
+		<pattern>* THROW A * SIDED DIE *</pattern>
+		<template><think><set name="expression"><star index="2"/></set><set name="ctype">4</set></think><srai>SPECIAL DIE</srai></template>
+
+	</category>
+
 	<category>
 		<pattern>CALCULATOR</pattern>
 		<template>Calculating...</template>

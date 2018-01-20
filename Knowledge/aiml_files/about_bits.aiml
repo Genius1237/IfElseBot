@@ -41,8 +41,8 @@
 	</category>
 
 	<category>
-		<pattern>ABOUT BITS PILANI * CAMPUS</pattern>
-		<template><srai>ABOUT <set name="campus"><star/></set> CAMPUS</srai></template>
+		<pattern>* ABOUT BITS PILANI * CAMPUS</pattern>
+		<template><srai>ABOUT <set name="campus"><star index="2"/></set> CAMPUS</srai></template>
 	</category>
 
 	<category>

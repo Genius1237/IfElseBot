@@ -224,8 +224,8 @@
 			C3, 
 			Yummpys, 
 			AMUL,
-			Mess
-			Do you want to know more about a purticular restaurant.
+			Mess.
+			Do you want to know more about a particular restaurant.
 			<think><set name="topic">NEARBY PLACES</set></think>
 		</template>
 

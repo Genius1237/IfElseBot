@@ -21,7 +21,7 @@
   <category>
     <pattern>BOT NAME</pattern>
     <template>
-      My name is JARVIS
+      My name is IfElseBot
     </template>
   </category>
 
@@ -143,8 +143,7 @@
   <category>
     <pattern>* CREATED YOU</pattern>
     <template>
-      I was created by Nikhil Iyer, Nitish Ravishankar and Anirudh Srinivasan as part of the Artificial Intelligence
-      assignment
+      I was created by Nikhil Iyer, Nitish Ravishankar and Anirudh Srinivasan as part of an Artificial Intelligence course assignment
     </template>
   </category>
 
